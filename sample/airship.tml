@@ -1,0 +1,363 @@
+[XMLName]
+  Space = ""
+  Local = "map"
+
+[map]
+  proto = "1.3.3"
+  name = "Airship War"
+  version = "1.3.1"
+  objective = "Leak lava from the enemy's obsidian core."
+
+  [[map.authors]]
+
+    [[map.authors.author]]
+      name = "ayunyan"
+
+  [[map.teams]]
+
+    [[map.teams.team]]
+      name = "Blue Team"
+      color = "blue"
+      max = 28
+
+    [[map.teams.team]]
+      name = "Red Team"
+      color = "dark red"
+      max = 28
+
+  [[map.kits]]
+
+    [[map.kits.kit]]
+      name = "spawn"
+
+      [[map.kits.kit.item]]
+        item = "stone sword"
+        slot = 0
+
+      [[map.kits.kit.item]]
+        item = "bow"
+        slot = 1
+
+      [[map.kits.kit.item]]
+        item = "log"
+        slot = 2
+        amount = 32
+
+      [[map.kits.kit.item]]
+        item = "cooked chicken"
+        slot = 3
+        amount = 16
+
+      [[map.kits.kit.item]]
+        item = "arrow"
+        slot = 28
+        amount = 64
+
+      [[map.kits.kit.item]]
+        item = "arrow"
+        slot = 29
+        amount = 64
+
+    [[map.kits.kit]]
+      name = "blue"
+      parents = "spawn"
+
+      [[map.kits.kit.helmet]]
+        material = "leather helmet"
+        color = "0066cc"
+
+    [[map.kits.kit]]
+      name = "red"
+      parents = "spawn"
+
+      [[map.kits.kit.helmet]]
+        material = "leather helmet"
+        color = "cd0000"
+
+  [[map.spawns]]
+
+    [[map.spawns.spawn]]
+      team = "blue"
+      yaw = -180
+      kit = "blue"
+
+      [[map.spawns.spawn.cuboid]]
+        min = "-48,117,117"
+        max = "-46,117,119"
+
+    [[map.spawns.spawn]]
+      team = "red"
+      yaw = -180
+      kit = "red"
+
+      [[map.spawns.spawn.cuboid]]
+        min = "104,117,117"
+        max = "106,117,119"
+
+    [[map.spawns.default]]
+      yaw = -180
+
+      [[map.spawns.default.cuboid]]
+        min = "27,115,115"
+        max = "31,115,119"
+
+  [[map.itemremove]]
+
+    [[map.itemremove.item]]
+      item = "leather helmet"
+
+    [[map.itemremove.item]]
+      item = "stone sword"
+
+    [[map.itemremove.item]]
+      item = "bow"
+
+    [[map.itemremove.item]]
+      item = "wood"
+
+    [[map.itemremove.item]]
+      item = "log"
+
+    [[map.itemremove.item]]
+      item = "cooked chicken"
+
+  [[map.filters]]
+
+    [[map.filters.filter]]
+      name = "only-blue"
+
+      [[map.filters.filter.team]]
+        name = "blue"
+
+    [[map.filters.filter]]
+      name = "only-red"
+
+      [[map.filters.filter.team]]
+        name = "red"
+
+    [[map.filters.filter]]
+      name = "no-teamgrief-blue"
+
+      [[map.filters.filter.not]]
+
+        [[map.filters.filter.not.all]]
+
+          [[map.filters.filter.not.all.not]]
+
+            [[map.filters.filter.not.all.not.all]]
+
+              [[map.filters.filter.not.all.not.all.block]]
+                material = "tnt"
+
+              [[map.filters.filter.not.all.not.all.cause]]
+                cause = "explosion"
+
+          [[map.filters.filter.not.all.team]]
+            name = "blue"
+
+          [[map.filters.filter.not.all.cause]]
+            cause = "explosion"
+
+    [[map.filters.filter]]
+      name = "no-teamgrief-red"
+
+      [[map.filters.filter.not]]
+
+        [[map.filters.filter.not.all]]
+
+          [[map.filters.filter.not.all.not]]
+
+            [[map.filters.filter.not.all.not.all]]
+
+              [[map.filters.filter.not.all.not.all.block]]
+                material = "tnt"
+
+              [[map.filters.filter.not.all.not.all.cause]]
+                cause = "explosion"
+
+          [[map.filters.filter.not.all.team]]
+            name = "red"
+
+          [[map.filters.filter.not.all.cause]]
+            cause = "explosion"
+
+    [[map.filters.filter]]
+      name = "no-tnt"
+
+      [[map.filters.filter.deny]]
+
+        [[map.filters.filter.deny.block]]
+          material = "tnt"
+
+    [[map.filters.filter]]
+      name = "no-dispenser"
+
+      [[map.filters.filter.deny]]
+
+        [[map.filters.filter.deny.block]]
+          material = "dispenser"
+
+  [[map.regions]]
+
+    [[map.regions.rectangle]]
+      name = "red-ship"
+      min = "44,14"
+      max = "78,71"
+
+    [[map.regions.rectangle]]
+      name = "blue-ship"
+      min = "-21,14"
+      max = "13,71"
+
+    [[map.regions.union]]
+      name = "red-base"
+
+      [[map.regions.union.cuboid]]
+        min = "53,80,63"
+        max = "69,85,71"
+
+      [[map.regions.union.cuboid]]
+        min = "57,80,58"
+        max = "65,85,62"
+
+    [[map.regions.union]]
+      name = "blue-base"
+
+      [[map.regions.union.cuboid]]
+        min = "-12,80,63"
+        max = "4,85,71"
+
+      [[map.regions.union.cuboid]]
+        min = "-8,80,58"
+        max = "0,85,62"
+
+    [[map.regions.union]]
+      name = "base"
+
+      [[map.regions.union.region]]
+        name = "blue-base"
+
+      [[map.regions.union.region]]
+        name = "red-base"
+
+    [[map.regions.apply]]
+      block-filter = "no-dispenser"
+      message = "You may not place Dispensers on this map."
+
+      [[map.regions.apply.rectangle]]
+        min = "-oo,-oo"
+        max = "oo,oo"
+
+    [[map.regions.apply]]
+      block-filter = "no-tnt"
+      message = "You may not place TNT in the base."
+
+      [[map.regions.apply.region]]
+        name = "base"
+
+    [[map.regions.apply]]
+      enter-filter = "only-red"
+      message = "You may not enter enemy base."
+
+      [[map.regions.apply.region]]
+        name = "red-base"
+
+    [[map.regions.apply]]
+      block-filter = "only-red"
+
+      [[map.regions.apply.region]]
+        name = "red-base"
+
+    [[map.regions.apply]]
+      enter-filter = "only-blue"
+      message = "You may not enter enemy base."
+
+      [[map.regions.apply.region]]
+        name = "blue-base"
+
+    [[map.regions.apply]]
+      block-filter = "only-blue"
+
+      [[map.regions.apply.region]]
+        name = "blue-base"
+
+    [[map.regions.apply]]
+      block-filter = "no-teamgrief-blue"
+
+      [[map.regions.apply.region]]
+        name = "blue-ship"
+
+    [[map.regions.apply]]
+      block-filter = "no-teamgrief-red"
+
+      [[map.regions.apply.region]]
+        name = "red-ship"
+
+    [[map.regions.apply]]
+      block-filter = "deny-all"
+      message = "You may not modify blocks outside battlefield."
+
+      [[map.regions.apply.negative]]
+
+        [[map.regions.apply.negative.cuboid]]
+          min = "-22,70,12"
+          max = "79,112,75"
+
+  [[map.portals]]
+
+    [[map.portals.portal]]
+      location-x = "@61"
+      location-y = "@81"
+      location-z = "@66"
+
+      [[map.portals.portal.cuboid]]
+        min = "104,114,93"
+        max = "106,116,93"
+
+    [[map.portals.portal]]
+      location-x = "@105"
+      location-y = "@117"
+      location-z = "@118"
+
+      [[map.portals.portal.cuboid]]
+        min = "60,81,70"
+        max = "62,83,70"
+
+    [[map.portals.portal]]
+      location-x = "@-4"
+      location-y = "@81"
+      location-z = "@66"
+
+      [[map.portals.portal.cuboid]]
+        min = "-48,114,93"
+        max = "-46,116,93"
+
+    [[map.portals.portal]]
+      location-x = "@-47"
+      location-y = "@117"
+      location-z = "@118"
+
+      [[map.portals.portal.cuboid]]
+        min = "-5,83,70"
+        max = "-3,81,70"
+
+  [[map.cores]]
+    material = "obsidian"
+    leak = 3
+
+    [[map.cores.core]]
+      team = "blue"
+
+      [[map.cores.core.cuboid]]
+        min = "-5,73,45"
+        max = "-3,78,47"
+
+    [[map.cores.core]]
+      team = "red"
+
+      [[map.cores.core.cuboid]]
+        min = "60,73,45"
+        max = "62,78,47"
+
+  [[map.maxbuildheight]]
+    height = "112"

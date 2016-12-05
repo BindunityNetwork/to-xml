@@ -1,0 +1,504 @@
+{
+  "XMLName": {
+    "Space": "",
+    "Local": "map"
+  },
+  "map": {
+    "proto": "1.3.3",
+    "name": "Airship War",
+    "version": "1.3.1",
+    "objective": "Leak lava from the enemy's obsidian core.",
+    "authors": [
+      {
+        "author": [
+          {
+            "name": "ayunyan"
+          }
+        ]
+      }
+    ],
+    "teams": [
+      {
+        "team": [
+          {
+            "name": "Blue Team",
+            "color": "blue",
+            "max": 28
+          },
+          {
+            "name": "Red Team",
+            "color": "dark red",
+            "max": 28
+          }
+        ]
+      }
+    ],
+    "kits": [
+      {
+        "kit": [
+          {
+            "name": "spawn",
+            "item": [
+              {
+                "item": "stone sword",
+                "slot": 0
+              },
+              {
+                "item": "bow",
+                "slot": 1
+              },
+              {
+                "item": "log",
+                "slot": 2,
+                "amount": 32
+              },
+              {
+                "item": "cooked chicken",
+                "slot": 3,
+                "amount": 16
+              },
+              {
+                "item": "arrow",
+                "slot": 28,
+                "amount": 64
+              },
+              {
+                "item": "arrow",
+                "slot": 29,
+                "amount": 64
+              }
+            ]
+          },
+          {
+            "name": "blue",
+            "parents": "spawn",
+            "helmet": [
+              {
+                "material": "leather helmet",
+                "color": "0066cc"
+              }
+            ]
+          },
+          {
+            "name": "red",
+            "parents": "spawn",
+            "helmet": [
+              {
+                "material": "leather helmet",
+                "color": "cd0000"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "spawns": [
+      {
+        "spawn": [
+          {
+            "team": "blue",
+            "yaw": -180,
+            "kit": "blue",
+            "cuboid": [
+              {
+                "min": "-48,117,117",
+                "max": "-46,117,119"
+              }
+            ]
+          },
+          {
+            "team": "red",
+            "yaw": -180,
+            "kit": "red",
+            "cuboid": [
+              {
+                "min": "104,117,117",
+                "max": "106,117,119"
+              }
+            ]
+          }
+        ],
+        "default": [
+          {
+            "yaw": -180,
+            "cuboid": [
+              {
+                "min": "27,115,115",
+                "max": "31,115,119"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "itemremove": [
+      {
+        "item": [
+          {
+            "item": "leather helmet"
+          },
+          {
+            "item": "stone sword"
+          },
+          {
+            "item": "bow"
+          },
+          {
+            "item": "wood"
+          },
+          {
+            "item": "log"
+          },
+          {
+            "item": "cooked chicken"
+          }
+        ]
+      }
+    ],
+    "filters": [
+      {
+        "filter": [
+          {
+            "name": "only-blue",
+            "team": [
+              {
+                "name": "blue"
+              }
+            ]
+          },
+          {
+            "name": "only-red",
+            "team": [
+              {
+                "name": "red"
+              }
+            ]
+          },
+          {
+            "name": "no-teamgrief-blue",
+            "not": [
+              {
+                "all": [
+                  {
+                    "not": [
+                      {
+                        "all": [
+                          {
+                            "block": [
+                              {
+                                "material": "tnt"
+                              }
+                            ],
+                            "cause": [
+                              {
+                                "cause": "explosion"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "team": [
+                      {
+                        "name": "blue"
+                      }
+                    ],
+                    "cause": [
+                      {
+                        "cause": "explosion"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "no-teamgrief-red",
+            "not": [
+              {
+                "all": [
+                  {
+                    "not": [
+                      {
+                        "all": [
+                          {
+                            "block": [
+                              {
+                                "material": "tnt"
+                              }
+                            ],
+                            "cause": [
+                              {
+                                "cause": "explosion"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "team": [
+                      {
+                        "name": "red"
+                      }
+                    ],
+                    "cause": [
+                      {
+                        "cause": "explosion"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "no-tnt",
+            "deny": [
+              {
+                "block": [
+                  {
+                    "material": "tnt"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "no-dispenser",
+            "deny": [
+              {
+                "block": [
+                  {
+                    "material": "dispenser"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "regions": [
+      {
+        "rectangle": [
+          {
+            "name": "red-ship",
+            "min": "44,14",
+            "max": "78,71"
+          },
+          {
+            "name": "blue-ship",
+            "min": "-21,14",
+            "max": "13,71"
+          }
+        ],
+        "union": [
+          {
+            "name": "red-base",
+            "cuboid": [
+              {
+                "min": "53,80,63",
+                "max": "69,85,71"
+              },
+              {
+                "min": "57,80,58",
+                "max": "65,85,62"
+              }
+            ]
+          },
+          {
+            "name": "blue-base",
+            "cuboid": [
+              {
+                "min": "-12,80,63",
+                "max": "4,85,71"
+              },
+              {
+                "min": "-8,80,58",
+                "max": "0,85,62"
+              }
+            ]
+          },
+          {
+            "name": "base",
+            "region": [
+              {
+                "name": "blue-base"
+              },
+              {
+                "name": "red-base"
+              }
+            ]
+          }
+        ],
+        "apply": [
+          {
+            "block-filter": "no-dispenser",
+            "message": "You may not place Dispensers on this map.",
+            "rectangle": [
+              {
+                "min": "-oo,-oo",
+                "max": "oo,oo"
+              }
+            ]
+          },
+          {
+            "block-filter": "no-tnt",
+            "message": "You may not place TNT in the base.",
+            "region": [
+              {
+                "name": "base"
+              }
+            ]
+          },
+          {
+            "enter-filter": "only-red",
+            "message": "You may not enter enemy base.",
+            "region": [
+              {
+                "name": "red-base"
+              }
+            ]
+          },
+          {
+            "block-filter": "only-red",
+            "region": [
+              {
+                "name": "red-base"
+              }
+            ]
+          },
+          {
+            "enter-filter": "only-blue",
+            "message": "You may not enter enemy base.",
+            "region": [
+              {
+                "name": "blue-base"
+              }
+            ]
+          },
+          {
+            "block-filter": "only-blue",
+            "region": [
+              {
+                "name": "blue-base"
+              }
+            ]
+          },
+          {
+            "block-filter": "no-teamgrief-blue",
+            "region": [
+              {
+                "name": "blue-ship"
+              }
+            ]
+          },
+          {
+            "block-filter": "no-teamgrief-red",
+            "region": [
+              {
+                "name": "red-ship"
+              }
+            ]
+          },
+          {
+            "block-filter": "deny-all",
+            "message": "You may not modify blocks outside battlefield.",
+            "negative": [
+              {
+                "cuboid": [
+                  {
+                    "min": "-22,70,12",
+                    "max": "79,112,75"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "portals": [
+      {
+        "portal": [
+          {
+            "location-x": "@61",
+            "location-y": "@81",
+            "location-z": "@66",
+            "cuboid": [
+              {
+                "min": "104,114,93",
+                "max": "106,116,93"
+              }
+            ]
+          },
+          {
+            "location-x": "@105",
+            "location-y": "@117",
+            "location-z": "@118",
+            "cuboid": [
+              {
+                "min": "60,81,70",
+                "max": "62,83,70"
+              }
+            ]
+          },
+          {
+            "location-x": "@-4",
+            "location-y": "@81",
+            "location-z": "@66",
+            "cuboid": [
+              {
+                "min": "-48,114,93",
+                "max": "-46,116,93"
+              }
+            ]
+          },
+          {
+            "location-x": "@-47",
+            "location-y": "@117",
+            "location-z": "@118",
+            "cuboid": [
+              {
+                "min": "-5,83,70",
+                "max": "-3,81,70"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "cores": [
+      {
+        "material": "obsidian",
+        "leak": 3,
+        "core": [
+          {
+            "team": "blue",
+            "cuboid": [
+              {
+                "min": "-5,73,45",
+                "max": "-3,78,47"
+              }
+            ]
+          },
+          {
+            "team": "red",
+            "cuboid": [
+              {
+                "min": "60,73,45",
+                "max": "62,78,47"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "maxbuildheight": [
+      {
+        "height": "112"
+      }
+    ]
+  }
+}

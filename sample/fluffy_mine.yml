@@ -1,0 +1,223 @@
+xmlname:
+  space: ""
+  local: map
+map:
+  proto: 1.3.0
+  name: Fluffy Mine
+  version: 2.0.0
+  objective: "\n  敵陣にある黒曜石の破壊 / Destruction of obsidian in the enemy lines.\n  "
+  authors:
+  - author:
+    - name: alt013
+  teams:
+  - team:
+    - name: Blue Team
+      color: blue
+      max: 16
+    - name: Red Team
+      color: dark red
+      max: 16
+  kits:
+  - kit:
+    - name: spawn
+      item:
+      - item: stone_sword
+        slot: 0
+      - item: bow
+        slot: 1
+      - item: stone_spade
+        slot: 2
+        enchantment: durability:2
+      - item: stone_axe
+        slot: 3
+        enchantment: durability:2
+      - item: diamond_pickaxe
+        slot: 4
+        enchantment: dig_speed:3
+      - item: golden_apple
+        slot: 5
+        amount: 1
+      - item: bread
+        slot: 6
+        amount: 32
+      - item: glass
+        slot: 7
+        amount: 32
+      - item: log
+        slot: 8
+        amount: 16
+      - item: arrow
+        slot: 28
+        amount: 24
+        bind: "true"
+    - name: red
+      parents: spawn
+      helmet:
+      - material: leather helmet
+        color: cd0000
+      chestplate:
+      - material: leather chestplate
+        color: cd0000
+      leggings:
+      - material: leather leggings
+        color: cd0000
+      boots:
+      - material: leather boots
+        color: cd0000
+    - name: blue
+      parents: spawn
+      helmet:
+      - material: leather helmet
+        color: 0066cc
+      chestplate:
+      - material: leather chestplate
+        color: 0066cc
+      leggings:
+      - material: leather leggings
+        color: 0066cc
+      boots:
+      - material: leather boots
+        color: 0066cc
+  spawns:
+  - spawn:
+    - team: blue
+      yaw: -90
+      kit: blue
+      cuboid:
+      - min: 3,7,-33
+        max: 3,7,-33
+      - min: 3,7,-3
+        max: 3,7,-3
+    - team: red
+      yaw: 90
+      kit: red
+      cuboid:
+      - min: 95,7,-4
+        max: 95,7,-4
+      - min: 95,7,-34
+        max: 95,7,-34
+    default:
+    - yaw: 0
+      cuboid:
+      - min: 50,53,-40
+        max: 50,53,-40
+  itemremove:
+  - item:
+    - item: leather helmet
+    - item: leather chestplate
+    - item: leather leggings
+    - item: leather boots
+    - item: log
+    - item: wood
+    - item: glass
+    - item: stone_sword
+    - item: bow
+    - item: diamond_pickaxe
+    - item: stone_spade
+    - item: stone_axe
+    - item: obsidian
+    - item: bread
+  filters:
+  - filter:
+    - name: only-blue
+      parents: deny-players deny-world
+      allow:
+      - team:
+        - name: blue
+    - name: only-red
+      parents: deny-players deny-world
+      allow:
+      - team:
+        - name: red
+  regions:
+  - apply:
+    - enter-filter: only-blue
+      message: 敵陣本拠地に入れません/You may not enter the enemy team's base
+      rectangle:
+      - min: 11,1
+        max: -0,-8
+      - min: 11,-38
+        max: -0,-28
+    - enter-filter: only-red
+      message: 敵軍本拠地に入れません。 /You may not enter the enemy team's base.
+      rectangle:
+      - min: 87,-38
+        max: 99,-28
+      - min: 99,-8
+        max: 87,0
+    - block-filter: deny-all
+      message: 編集不可能の区域です。 / You may not modify arena
+      rectangle:
+      - name: rectangle-region
+        min: -1,1
+        max: 99,1
+      - name: rectangle-region
+        min: 99,1
+        max: 99,-39
+      - name: rectangle-region
+        min: 99,-39
+        max: -1,-39
+      - name: rectangle-region
+        min: -1,-39
+        max: -1,1
+      - name: rectangle-region
+        min: -1,1
+        max: 11,-9
+      - name: rectangle-region
+        min: -1,-39
+        max: 11,-29
+      - name: rectangle-region
+        min: 99,-39
+        max: 87,-29
+      - name: rectangle-region
+        min: 87,-9
+        max: 99,1
+  blockdrops:
+  - rule:
+    - filter:
+      - block:
+        - material: obsidian
+  destroyables:
+  - materials: obsidian
+    completion: 100%
+    destroyable:
+    - owner: red
+      name: Monument
+      cuboid:
+      - min: 94,5,-19
+        max: 94,2,-19
+    - owner: blue
+      name: Monument
+      cuboid:
+      - min: 4,5,-19
+        max: 4,2,-19
+  include:
+  - src: tutorial.xml
+  maxbuildheight:
+  - height: "30"
+  tutorial:
+  - stage:
+    - title: Destroy the Monument (DTM)
+      message:
+      - line:
+        - message: This map is a `a`lDestroy the Monument `r(DTM) map.
+        - message: The objective is to destroy the other team's Monument.
+      - line:
+        - message: このマップは`a`lDestroy the Monument `r(DTM)マップです。
+        - message: 他チームのモニュメントを破壊する事が目標になります。
+      teleport:
+      - point:
+        - yaw: 90
+          pitch: 35
+          location: 50,45,-32
+    - title: Monument Location
+      message:
+      - line:
+        - message: The Monument is located at the back of the base.
+      - line:
+        - message: モニュメントは敵拠点奥にあります。
+      teleport:
+      - point:
+        - yaw: 90
+          pitch: 40
+          location: 8,7,-19
