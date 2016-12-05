@@ -1,0 +1,877 @@
+[XMLName]
+  Space = ""
+  Local = "map"
+
+[map]
+  proto = "1.3.3"
+  name = "Floating Box 4"
+  version = "1.3.1"
+  objective = "Take the enemy's wool located toeither side of the enemy's base and place it in your victory"
+
+  [[map.authors]]
+
+    [[map.authors.author]]
+      name = "hayatarou_"
+      contribution = "Author/XMLCoding"
+
+    [[map.authors.author]]
+      name = "toufuu3"
+      contribution = "Author/Builder"
+
+  [[map.teams]]
+
+    [[map.teams.team]]
+      name = "Red Team"
+      color = "red"
+      max = 20
+
+    [[map.teams.team]]
+      name = "Blue Team"
+      color = "blue"
+      max = 20
+
+  [[map.kits]]
+
+    [[map.kits.kit]]
+      name = "spawn"
+
+      [[map.kits.kit.item]]
+        item = "stone sword"
+        slot = 0
+        enchantment = "durability:3"
+        bind = "true"
+
+      [[map.kits.kit.item]]
+        item = "bow"
+        slot = 1
+        bind = "true"
+
+      [[map.kits.kit.item]]
+        item = "iron axe"
+        slot = 2
+        enchantment = "dig_speed:3"
+        bind = "true"
+
+      [[map.kits.kit.item]]
+        item = "iron pickaxe"
+        slot = 3
+        enchantment = "dig_speed:3"
+        bind = "true"
+
+      [[map.kits.kit.item]]
+        item = "golden apple"
+        slot = 4
+        amount = 1
+        bind = "true"
+
+      [[map.kits.kit.item]]
+        item = "cooked beef"
+        slot = 5
+        amount = 16
+
+      [[map.kits.kit.item]]
+        item = "log"
+        slot = 6
+        amount = 32
+
+      [[map.kits.kit.item]]
+        item = "arrow"
+        slot = 9
+        amount = 16
+
+    [[map.kits.kit]]
+      name = "red"
+      parents = "spawn"
+
+      [[map.kits.kit.item]]
+        item = "stained glass"
+        slot = 7
+        amount = 64
+        damage = 14
+
+      [[map.kits.kit.chestplate]]
+        material = "leather chestplate"
+        color = "993333"
+
+      [[map.kits.kit.leggings]]
+        material = "leather leggings"
+        color = "993333"
+
+      [[map.kits.kit.boots]]
+        material = "leather boots"
+        color = "993333"
+
+    [[map.kits.kit]]
+      name = "blue"
+      parents = "spawn"
+
+      [[map.kits.kit.item]]
+        item = "stained glass"
+        slot = 7
+        amount = 64
+        damage = 11
+
+      [[map.kits.kit.chestplate]]
+        material = "leather chestplate"
+        color = "334CB2"
+
+      [[map.kits.kit.leggings]]
+        material = "leather leggings"
+        color = "334CB2"
+
+      [[map.kits.kit.boots]]
+        material = "leather boots"
+        color = "334CB2"
+
+  [[map.spawns]]
+
+    [[map.spawns.spawn]]
+      team = "red"
+      yaw = -45
+      kit = "red"
+
+      [[map.spawns.spawn.cuboid]]
+        min = "-47,9,43"
+        max = "-47,9,43"
+
+    [[map.spawns.spawn]]
+      team = "blue"
+      yaw = 135
+      kit = "blue"
+
+      [[map.spawns.spawn.cuboid]]
+        min = "47,9,137"
+        max = "47,9,137"
+
+    [[map.spawns.default]]
+      yaw = 0
+
+      [[map.spawns.default.cuboid]]
+        min = "0.5,31,0.5"
+        max = "0.5,31,0.5"
+
+  [[map.itemremove]]
+
+    [[map.itemremove.item]]
+      item = "stained glass"
+
+    [[map.itemremove.item]]
+      item = "wool"
+
+    [[map.itemremove.item]]
+      item = "gold chestplate"
+
+    [[map.itemremove.item]]
+      item = "gold leggings"
+
+    [[map.itemremove.item]]
+      item = "gold boots"
+
+    [[map.itemremove.item]]
+      item = "leather chestplate"
+
+    [[map.itemremove.item]]
+      item = "chainmail boots"
+
+    [[map.itemremove.item]]
+      item = "arrow"
+
+  [[map.toolrepair]]
+
+    [[map.toolrepair.tool]]
+      material = "wood sword"
+
+    [[map.toolrepair.tool]]
+      material = "iron axe"
+
+    [[map.toolrepair.tool]]
+      material = "iron pickaxe"
+
+    [[map.toolrepair.tool]]
+      material = "bow"
+
+  [[map.filters]]
+
+    [[map.filters.filter]]
+      name = "red"
+
+      [[map.filters.filter.team]]
+        name = "red"
+
+    [[map.filters.filter]]
+      name = "blue"
+
+      [[map.filters.filter.team]]
+        name = "blue"
+
+    [[map.filters.filter]]
+      name = "goldbreak"
+
+      [[map.filters.filter.block]]
+        material = "gold block"
+
+    [[map.filters.filter]]
+      name = "woolbreak"
+
+      [[map.filters.filter.block]]
+        material = "wool"
+
+  [[map.regions]]
+
+    [[map.regions.cuboid]]
+      name = "gold"
+      min = "-33,2,29"
+      max = "-39,5,35"
+
+    [[map.regions.cuboid]]
+      name = "gold1"
+      min = "-33,2,57"
+      max = "-39,5,51"
+
+    [[map.regions.cuboid]]
+      name = "gold2"
+      min = "-61,2,57"
+      max = "-55,5,51"
+
+    [[map.regions.cuboid]]
+      name = "gold3"
+      min = "-61,2,29"
+      max = "-55,5,35"
+
+    [[map.regions.cuboid]]
+      name = "gold4"
+      min = "61,2,123"
+      max = "55,5,129"
+
+    [[map.regions.cuboid]]
+      name = "gold5"
+      min = "61,2,151"
+      max = "55,5,145"
+
+    [[map.regions.cuboid]]
+      name = "gold6"
+      min = "33,2,151"
+      max = "39,5,145"
+
+    [[map.regions.cuboid]]
+      name = "gold7"
+      min = "33,2,123"
+      max = "39,5,129"
+
+    [[map.regions.rectangle]]
+      name = "red-base"
+      min = "-32,58"
+      max = "-62,28"
+
+    [[map.regions.rectangle]]
+      name = "blue-base"
+      min = "32,122"
+      max = "62,152"
+
+    [[map.regions.rectangle]]
+      name = "red-wool"
+      min = "-5,136"
+      max = "5,146"
+
+    [[map.regions.rectangle]]
+      name = "red-wool1"
+      min = "46,95"
+      max = "56,85"
+
+    [[map.regions.rectangle]]
+      name = "red-wool2"
+      min = "41,87"
+      max = "45,93"
+
+    [[map.regions.rectangle]]
+      name = "red-wool3"
+      min = "3,131"
+      max = "-3,135"
+
+    [[map.regions.rectangle]]
+      name = "blue-wool"
+      min = "5,44"
+      max = "-5,34"
+
+    [[map.regions.rectangle]]
+      name = "blue-wool1"
+      min = "-46,85"
+      max = "-56,95"
+
+    [[map.regions.rectangle]]
+      name = "blue-wool2"
+      min = "3,45"
+      max = "-3,49"
+
+    [[map.regions.rectangle]]
+      name = "blue-wool3"
+      min = "-41,93"
+      max = "-45,87"
+
+    [[map.regions.rectangle]]
+      name = "void"
+      min = "-62,28"
+      max = "62,152"
+
+    [[map.regions.rectangle]]
+      name = "wool-place"
+      min = "59,111"
+      max = "62,117"
+
+    [[map.regions.rectangle]]
+      name = "wool-place1"
+      min = "27,149"
+      max = "21,152"
+
+    [[map.regions.rectangle]]
+      name = "wool-place2"
+      min = "-27,31"
+      max = "-21,28"
+
+    [[map.regions.rectangle]]
+      name = "wool-place3"
+      min = "-59,63"
+      max = "-62,69"
+
+    [[map.regions.union]]
+      name = "wool-places"
+
+      [[map.regions.union.region]]
+        name = "wool-place"
+
+      [[map.regions.union.region]]
+        name = "wool-place1"
+
+      [[map.regions.union.region]]
+        name = "wool-place2"
+
+      [[map.regions.union.region]]
+        name = "wool-place3"
+
+    [[map.regions.union]]
+      name = "base"
+
+      [[map.regions.union.region]]
+        name = "red-base"
+
+      [[map.regions.union.region]]
+        name = "blue-base"
+
+    [[map.regions.union]]
+      name = "woolroom"
+
+      [[map.regions.union.region]]
+        name = "red-wool"
+
+      [[map.regions.union.region]]
+        name = "red-wool1"
+
+      [[map.regions.union.region]]
+        name = "red-wool2"
+
+      [[map.regions.union.region]]
+        name = "red-wool3"
+
+      [[map.regions.union.region]]
+        name = "blue-wool"
+
+      [[map.regions.union.region]]
+        name = "blue-wool1"
+
+      [[map.regions.union.region]]
+        name = "blue-wool2"
+
+      [[map.regions.union.region]]
+        name = "blue-wool3"
+
+    [[map.regions.union]]
+      name = "red-wools"
+
+      [[map.regions.union.region]]
+        name = "red-wool"
+
+      [[map.regions.union.region]]
+        name = "red-wool1"
+
+      [[map.regions.union.region]]
+        name = "red-wool2"
+
+      [[map.regions.union.region]]
+        name = "red-wool3"
+
+    [[map.regions.union]]
+      name = "blue-wools"
+
+      [[map.regions.union.region]]
+        name = "blue-wool"
+
+      [[map.regions.union.region]]
+        name = "blue-wool1"
+
+      [[map.regions.union.region]]
+        name = "blue-wool2"
+
+      [[map.regions.union.region]]
+        name = "blue-wool3"
+
+    [[map.regions.union]]
+      name = "golds"
+
+      [[map.regions.union.region]]
+        name = "gold"
+
+      [[map.regions.union.region]]
+        name = "gold1"
+
+      [[map.regions.union.region]]
+        name = "gold2"
+
+      [[map.regions.union.region]]
+        name = "gold3"
+
+      [[map.regions.union.region]]
+        name = "gold4"
+
+      [[map.regions.union.region]]
+        name = "gold5"
+
+      [[map.regions.union.region]]
+        name = "gold6"
+
+      [[map.regions.union.region]]
+        name = "gold7"
+
+    [[map.regions.complement]]
+      name = "wool-places-complement"
+
+      [[map.regions.complement.block]]
+        location = "24.0,8.0,151.0"
+
+      [[map.regions.complement.block]]
+        location = "61.0,8.0,114.0"
+
+      [[map.regions.complement.block]]
+        location = "-24.0,8.0,29.0"
+
+      [[map.regions.complement.block]]
+        location = "-61.0,8.0,66.0"
+
+      [[map.regions.complement.region]]
+        name = "wool-places"
+
+    [[map.regions.apply]]
+      block-place-filter = "deny-place"
+      block-break-filter = "goldbreak"
+      message = "You can't modify the base."
+
+      [[map.regions.apply.region]]
+        name = "base"
+
+    [[map.regions.apply]]
+      block-place-filter = "deny-place"
+      block-break-filter = "woolbreak"
+      message = "You can't modify the wool room."
+
+      [[map.regions.apply.region]]
+        name = "woolroom"
+
+    [[map.regions.apply]]
+      enter-filter = "red"
+      message = "You can't enter to the enemy's base."
+
+      [[map.regions.apply.region]]
+        name = "red-base"
+
+    [[map.regions.apply]]
+      enter-filter = "blue"
+      message = "You can't enter to the enemy's base."
+
+      [[map.regions.apply.region]]
+        name = "blue-base"
+
+    [[map.regions.apply]]
+      enter-filter = "blue"
+      message = "You can't enter to the your team's wool room."
+
+      [[map.regions.apply.region]]
+        name = "blue-wools"
+
+    [[map.regions.apply]]
+      enter-filter = "red"
+      message = "You can't enter to the your team's wool room."
+
+      [[map.regions.apply.region]]
+        name = "red-wools"
+
+    [[map.regions.apply]]
+      block-place-filter = "deny-place"
+      block-break-filter = "deny-break"
+      message = "It is out of range, you can not put block here."
+
+      [[map.regions.apply.negative]]
+
+        [[map.regions.apply.negative.region]]
+          name = "void"
+
+    [[map.regions.apply]]
+      block-filter = "deny-blocks"
+      message = "You can not edit around the pedestal."
+
+      [[map.regions.apply.region]]
+        name = "wool-places-complement"
+
+  [[map.blockdrops]]
+
+    [[map.blockdrops.rule]]
+
+      [[map.blockdrops.rule.region]]
+
+        [[map.blockdrops.rule.region.region]]
+          name = "golds"
+
+      [[map.blockdrops.rule.filter]]
+
+        [[map.blockdrops.rule.filter.block]]
+          material = "gold block"
+
+      [[map.blockdrops.rule.drops]]
+
+        [[map.blockdrops.rule.drops.item]]
+          item = "gold chestplate"
+
+        [[map.blockdrops.rule.drops.item]]
+          item = "gold leggings"
+
+        [[map.blockdrops.rule.drops.item]]
+          item = "gold boots"
+
+      [[map.blockdrops.rule.experience]]
+        int = 0
+
+      [[map.blockdrops.rule.replacement]]
+        material = "air"
+
+      [[map.blockdrops.rule.direct]]
+        flag = true
+
+    [[map.blockdrops.rule]]
+
+      [[map.blockdrops.rule.region]]
+
+        [[map.blockdrops.rule.region.block]]
+          location = "0,3,39"
+          name = "green-wool"
+
+      [[map.blockdrops.rule.filter]]
+
+        [[map.blockdrops.rule.filter.block]]
+          material = "wool:13"
+
+      [[map.blockdrops.rule.drops]]
+
+        [[map.blockdrops.rule.drops.item]]
+          item = "wool"
+          amount = 2
+          damage = 13
+
+      [[map.blockdrops.rule.experience]]
+        int = 0
+
+      [[map.blockdrops.rule.replacement]]
+        material = "wool:13"
+
+      [[map.blockdrops.rule.direct]]
+        flag = true
+
+      [[map.blockdrops.rule.wrongtool]]
+        flag = true
+
+    [[map.blockdrops.rule]]
+
+      [[map.blockdrops.rule.region]]
+
+        [[map.blockdrops.rule.region.block]]
+          location = "51,3,90"
+          name = "magenta-wool"
+
+      [[map.blockdrops.rule.filter]]
+
+        [[map.blockdrops.rule.filter.block]]
+          material = "wool:2"
+
+      [[map.blockdrops.rule.drops]]
+
+        [[map.blockdrops.rule.drops.item]]
+          item = "wool"
+          amount = 2
+          damage = 2
+
+      [[map.blockdrops.rule.experience]]
+        int = 0
+
+      [[map.blockdrops.rule.replacement]]
+        material = "wool:2"
+
+      [[map.blockdrops.rule.direct]]
+        flag = true
+
+      [[map.blockdrops.rule.wrongtool]]
+        flag = true
+
+    [[map.blockdrops.rule]]
+
+      [[map.blockdrops.rule.region]]
+
+        [[map.blockdrops.rule.region.block]]
+          location = "0,3,141"
+          name = "pink-wool"
+
+      [[map.blockdrops.rule.filter]]
+
+        [[map.blockdrops.rule.filter.block]]
+          material = "wool:6"
+
+      [[map.blockdrops.rule.drops]]
+
+        [[map.blockdrops.rule.drops.item]]
+          item = "wool"
+          amount = 2
+          damage = 6
+
+      [[map.blockdrops.rule.experience]]
+        int = 0
+
+      [[map.blockdrops.rule.replacement]]
+        material = "wool:6"
+
+      [[map.blockdrops.rule.direct]]
+        flag = true
+
+      [[map.blockdrops.rule.wrongtool]]
+        flag = true
+
+    [[map.blockdrops.rule]]
+
+      [[map.blockdrops.rule.region]]
+
+        [[map.blockdrops.rule.region.block]]
+          location = "-51,3,90"
+          name = "lime-wool"
+
+      [[map.blockdrops.rule.filter]]
+
+        [[map.blockdrops.rule.filter.block]]
+          material = "wool:5"
+
+      [[map.blockdrops.rule.drops]]
+
+        [[map.blockdrops.rule.drops.item]]
+          item = "wool"
+          amount = 2
+          damage = 5
+
+      [[map.blockdrops.rule.experience]]
+        int = 0
+
+      [[map.blockdrops.rule.replacement]]
+        material = "wool:5"
+
+      [[map.blockdrops.rule.direct]]
+        flag = true
+
+      [[map.blockdrops.rule.wrongtool]]
+        flag = true
+
+  [[map.renewables]]
+    [map.renewables.renewable]
+
+  [[map.wools]]
+
+    [[map.wools.wool]]
+      team = "red"
+      color = "magenta"
+
+      [[map.wools.wool.block]]
+        location = "-61.0,8.0,66.0"
+
+    [[map.wools.wool]]
+      team = "red"
+      color = "pink"
+
+      [[map.wools.wool.block]]
+        location = "-24.0,8.0,29.0"
+
+    [[map.wools.wool]]
+      team = "blue"
+      color = "green"
+
+      [[map.wools.wool.block]]
+        location = "24.0,8.0,151.0"
+
+    [[map.wools.wool]]
+      team = "blue"
+      color = "lime"
+
+      [[map.wools.wool.block]]
+        location = "61.0,8.0,114.0"
+
+  [[map.include]]
+    src = "tutorial.xml"
+
+  [[map.maxbuildheight]]
+    height = "30"
+
+  [[map.autorespawn]]
+
+  [[map.locales]]
+
+    [[map.locales.locale]]
+      lang = "ja_JP"
+
+      [[map.locales.locale.string]]
+        name = "You can't modify the base."
+        value = "拠点は編集出来ません。"
+
+      [[map.locales.locale.string]]
+        name = "You can't modify the wool room."
+        value = "羊毛部屋は編集出来ません。"
+
+      [[map.locales.locale.string]]
+        name = "You can't enter to the enemy's base."
+        value = "敵チームの拠点には侵入出来ません。"
+
+      [[map.locales.locale.string]]
+        name = "You can't enter to the your team's wool room."
+        value = "自チームの羊毛部屋には侵入出来ません。"
+
+      [[map.locales.locale.string]]
+        name = "It is out of range, you can not put block here."
+        value = "範囲外です、ここにブロックを置けません。"
+
+      [[map.locales.locale.string]]
+        name = "Take the enemy's wool located to either side of the enemy's base and place it in　your victory"
+        value = "敵本拠地横にある羊毛を奪取し、台座に設置"
+
+      [[map.locales.locale.string]]
+        name = "You can not edit around the pedestal."
+        value = "台座周辺の編集はできません。"
+
+  [[map.tutorial]]
+
+    [[map.tutorial.stage]]
+      title = "Capture the Wool (CTW)"
+
+      [[map.tutorial.stage.message]]
+
+        [[map.tutorial.stage.message.line]]
+          message = "This map is a `a`lCapture the Wool`r (CTW) map."
+
+        [[map.tutorial.stage.message.line]]
+          message = "\n    \t\t\t\tThe objective is to grab the wool on the enemy side and place it on your victory monument.\n    \t\t\t"
+
+      [[map.tutorial.stage.message]]
+
+        [[map.tutorial.stage.message.line]]
+          message = "このマップは `a`lCapture the Wool`r (CTW) マップです。"
+
+        [[map.tutorial.stage.message.line]]
+          message = "敵陣の羊毛部屋から羊毛を奪取し、台座に設置する事が目標になります。"
+
+      [[map.tutorial.stage.teleport]]
+
+        [[map.tutorial.stage.teleport.point]]
+          yaw = 0.0
+          pitch = 0.0
+          location = "0.5,29,0.5"
+
+    [[map.tutorial.stage]]
+      title = "`cRed `rteam spawn"
+
+      [[map.tutorial.stage.message]]
+
+        [[map.tutorial.stage.message.line]]
+          message = "This is `cRed Team`r base."
+
+      [[map.tutorial.stage.message]]
+
+        [[map.tutorial.stage.message.line]]
+          message = "ここは`cRedチーム`rの拠点です。"
+
+      [[map.tutorial.stage.teleport]]
+
+        [[map.tutorial.stage.teleport.point]]
+          yaw = -225.0
+          pitch = 35.0
+          location = "-23.5,20,66.5"
+
+    [[map.tutorial.stage]]
+      title = "Blue team's Wool rooms"
+
+      [[map.tutorial.stage.message]]
+
+        [[map.tutorial.stage.message.line]]
+          message = "\n    \t\t\t\t`9Blue team`r side has `alime `rand `2green `r wool rooms.\n    \t\t\t"
+
+        [[map.tutorial.stage.message.line]]
+          message = "\n    \t\t\t\t`cRed Team`r side has `5magenta `rand `dpink`r wool rooms.\n    \t\t\t"
+
+        [[map.tutorial.stage.message.line]]
+          message = "\n    \t\t\t\t`cRed Team`r should defend these rooms against enemy who are trying to steal the wool.\n    \t\t\t"
+
+      [[map.tutorial.stage.message]]
+
+        [[map.tutorial.stage.message.line]]
+          message = "\n    \t\t\t\t`9Blueチーム`rの陣地には`alime`rと `2green `rの羊毛部屋があります。\n    \t\t\t"
+
+        [[map.tutorial.stage.message.line]]
+          message = "`cRedチーム`rの陣地には`5magenta`rと `dpink `rの羊毛部屋があります。"
+
+        [[map.tutorial.stage.message.line]]
+          message = "`cRedチーム`rは羊毛を奪取しようとする敵の攻撃からこの羊毛部屋を防衛する必要があります。"
+
+      [[map.tutorial.stage.teleport]]
+
+        [[map.tutorial.stage.teleport.point]]
+          yaw = 0.0
+          pitch = 40.0
+          location = "0.5,15,126.5"
+
+    [[map.tutorial.stage]]
+      title = "Place Point"
+
+      [[map.tutorial.stage.message]]
+
+        [[map.tutorial.stage.message.line]]
+          message = "This is the base for installing the wool."
+
+      [[map.tutorial.stage.message]]
+
+        [[map.tutorial.stage.message.line]]
+          message = "羊毛を設置する台座です。"
+
+      [[map.tutorial.stage.teleport]]
+
+        [[map.tutorial.stage.teleport.point]]
+          yaw = 0.0
+          pitch = 0.0
+          location = "24.5,7,149.5"
+
+    [[map.tutorial.stage]]
+      title = "glhf"
+
+      [[map.tutorial.stage.message]]
+
+        [[map.tutorial.stage.message.line]]
+          message = "Good Luck! Have Fun!"
+
+      [[map.tutorial.stage.message]]
+
+        [[map.tutorial.stage.message.line]]
+          message = "それではお楽しみください！"
+
+      [[map.tutorial.stage.teleport]]
+
+        [[map.tutorial.stage.teleport.point]]
+          yaw = 0.0
+          pitch = 0.0
+          location = "0,29,0"

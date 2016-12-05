@@ -1,0 +1,1169 @@
+{
+  "XMLName": {
+    "Space": "",
+    "Local": "map"
+  },
+  "map": {
+    "proto": "1.3.3",
+    "name": "Floating Box 4",
+    "version": "1.3.1",
+    "objective": "Take the enemy's wool located toeither side of the enemy's base and place it in your victory",
+    "authors": [
+      {
+        "author": [
+          {
+            "name": "hayatarou_",
+            "contribution": "Author/XMLCoding"
+          },
+          {
+            "name": "toufuu3",
+            "contribution": "Author/Builder"
+          }
+        ]
+      }
+    ],
+    "teams": [
+      {
+        "team": [
+          {
+            "name": "Red Team",
+            "color": "red",
+            "max": 20
+          },
+          {
+            "name": "Blue Team",
+            "color": "blue",
+            "max": 20
+          }
+        ]
+      }
+    ],
+    "kits": [
+      {
+        "kit": [
+          {
+            "name": "spawn",
+            "item": [
+              {
+                "item": "stone sword",
+                "slot": 0,
+                "enchantment": "durability:3",
+                "bind": "true"
+              },
+              {
+                "item": "bow",
+                "slot": 1,
+                "bind": "true"
+              },
+              {
+                "item": "iron axe",
+                "slot": 2,
+                "enchantment": "dig_speed:3",
+                "bind": "true"
+              },
+              {
+                "item": "iron pickaxe",
+                "slot": 3,
+                "enchantment": "dig_speed:3",
+                "bind": "true"
+              },
+              {
+                "item": "golden apple",
+                "slot": 4,
+                "amount": 1,
+                "bind": "true"
+              },
+              {
+                "item": "cooked beef",
+                "slot": 5,
+                "amount": 16
+              },
+              {
+                "item": "log",
+                "slot": 6,
+                "amount": 32
+              },
+              {
+                "item": "arrow",
+                "slot": 9,
+                "amount": 16
+              }
+            ]
+          },
+          {
+            "name": "red",
+            "parents": "spawn",
+            "item": [
+              {
+                "item": "stained glass",
+                "slot": 7,
+                "amount": 64,
+                "damage": 14
+              }
+            ],
+            "chestplate": [
+              {
+                "material": "leather chestplate",
+                "color": "993333"
+              }
+            ],
+            "leggings": [
+              {
+                "material": "leather leggings",
+                "color": "993333"
+              }
+            ],
+            "boots": [
+              {
+                "material": "leather boots",
+                "color": "993333"
+              }
+            ]
+          },
+          {
+            "name": "blue",
+            "parents": "spawn",
+            "item": [
+              {
+                "item": "stained glass",
+                "slot": 7,
+                "amount": 64,
+                "damage": 11
+              }
+            ],
+            "chestplate": [
+              {
+                "material": "leather chestplate",
+                "color": "334CB2"
+              }
+            ],
+            "leggings": [
+              {
+                "material": "leather leggings",
+                "color": "334CB2"
+              }
+            ],
+            "boots": [
+              {
+                "material": "leather boots",
+                "color": "334CB2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "spawns": [
+      {
+        "spawn": [
+          {
+            "team": "red",
+            "yaw": -45,
+            "kit": "red",
+            "cuboid": [
+              {
+                "min": "-47,9,43",
+                "max": "-47,9,43"
+              }
+            ]
+          },
+          {
+            "team": "blue",
+            "yaw": 135,
+            "kit": "blue",
+            "cuboid": [
+              {
+                "min": "47,9,137",
+                "max": "47,9,137"
+              }
+            ]
+          }
+        ],
+        "default": [
+          {
+            "yaw": 0,
+            "cuboid": [
+              {
+                "min": "0.5,31,0.5",
+                "max": "0.5,31,0.5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "itemremove": [
+      {
+        "item": [
+          {
+            "item": "stained glass"
+          },
+          {
+            "item": "wool"
+          },
+          {
+            "item": "gold chestplate"
+          },
+          {
+            "item": "gold leggings"
+          },
+          {
+            "item": "gold boots"
+          },
+          {
+            "item": "leather chestplate"
+          },
+          {
+            "item": "chainmail boots"
+          },
+          {
+            "item": "arrow"
+          }
+        ]
+      }
+    ],
+    "toolrepair": [
+      {
+        "tool": [
+          {
+            "material": "wood sword"
+          },
+          {
+            "material": "iron axe"
+          },
+          {
+            "material": "iron pickaxe"
+          },
+          {
+            "material": "bow"
+          }
+        ]
+      }
+    ],
+    "filters": [
+      {
+        "filter": [
+          {
+            "name": "red",
+            "team": [
+              {
+                "name": "red"
+              }
+            ]
+          },
+          {
+            "name": "blue",
+            "team": [
+              {
+                "name": "blue"
+              }
+            ]
+          },
+          {
+            "name": "goldbreak",
+            "block": [
+              {
+                "material": "gold block"
+              }
+            ]
+          },
+          {
+            "name": "woolbreak",
+            "block": [
+              {
+                "material": "wool"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "regions": [
+      {
+        "cuboid": [
+          {
+            "name": "gold",
+            "min": "-33,2,29",
+            "max": "-39,5,35"
+          },
+          {
+            "name": "gold1",
+            "min": "-33,2,57",
+            "max": "-39,5,51"
+          },
+          {
+            "name": "gold2",
+            "min": "-61,2,57",
+            "max": "-55,5,51"
+          },
+          {
+            "name": "gold3",
+            "min": "-61,2,29",
+            "max": "-55,5,35"
+          },
+          {
+            "name": "gold4",
+            "min": "61,2,123",
+            "max": "55,5,129"
+          },
+          {
+            "name": "gold5",
+            "min": "61,2,151",
+            "max": "55,5,145"
+          },
+          {
+            "name": "gold6",
+            "min": "33,2,151",
+            "max": "39,5,145"
+          },
+          {
+            "name": "gold7",
+            "min": "33,2,123",
+            "max": "39,5,129"
+          }
+        ],
+        "rectangle": [
+          {
+            "name": "red-base",
+            "min": "-32,58",
+            "max": "-62,28"
+          },
+          {
+            "name": "blue-base",
+            "min": "32,122",
+            "max": "62,152"
+          },
+          {
+            "name": "red-wool",
+            "min": "-5,136",
+            "max": "5,146"
+          },
+          {
+            "name": "red-wool1",
+            "min": "46,95",
+            "max": "56,85"
+          },
+          {
+            "name": "red-wool2",
+            "min": "41,87",
+            "max": "45,93"
+          },
+          {
+            "name": "red-wool3",
+            "min": "3,131",
+            "max": "-3,135"
+          },
+          {
+            "name": "blue-wool",
+            "min": "5,44",
+            "max": "-5,34"
+          },
+          {
+            "name": "blue-wool1",
+            "min": "-46,85",
+            "max": "-56,95"
+          },
+          {
+            "name": "blue-wool2",
+            "min": "3,45",
+            "max": "-3,49"
+          },
+          {
+            "name": "blue-wool3",
+            "min": "-41,93",
+            "max": "-45,87"
+          },
+          {
+            "name": "void",
+            "min": "-62,28",
+            "max": "62,152"
+          },
+          {
+            "name": "wool-place",
+            "min": "59,111",
+            "max": "62,117"
+          },
+          {
+            "name": "wool-place1",
+            "min": "27,149",
+            "max": "21,152"
+          },
+          {
+            "name": "wool-place2",
+            "min": "-27,31",
+            "max": "-21,28"
+          },
+          {
+            "name": "wool-place3",
+            "min": "-59,63",
+            "max": "-62,69"
+          }
+        ],
+        "union": [
+          {
+            "name": "wool-places",
+            "region": [
+              {
+                "name": "wool-place"
+              },
+              {
+                "name": "wool-place1"
+              },
+              {
+                "name": "wool-place2"
+              },
+              {
+                "name": "wool-place3"
+              }
+            ]
+          },
+          {
+            "name": "base",
+            "region": [
+              {
+                "name": "red-base"
+              },
+              {
+                "name": "blue-base"
+              }
+            ]
+          },
+          {
+            "name": "woolroom",
+            "region": [
+              {
+                "name": "red-wool"
+              },
+              {
+                "name": "red-wool1"
+              },
+              {
+                "name": "red-wool2"
+              },
+              {
+                "name": "red-wool3"
+              },
+              {
+                "name": "blue-wool"
+              },
+              {
+                "name": "blue-wool1"
+              },
+              {
+                "name": "blue-wool2"
+              },
+              {
+                "name": "blue-wool3"
+              }
+            ]
+          },
+          {
+            "name": "red-wools",
+            "region": [
+              {
+                "name": "red-wool"
+              },
+              {
+                "name": "red-wool1"
+              },
+              {
+                "name": "red-wool2"
+              },
+              {
+                "name": "red-wool3"
+              }
+            ]
+          },
+          {
+            "name": "blue-wools",
+            "region": [
+              {
+                "name": "blue-wool"
+              },
+              {
+                "name": "blue-wool1"
+              },
+              {
+                "name": "blue-wool2"
+              },
+              {
+                "name": "blue-wool3"
+              }
+            ]
+          },
+          {
+            "name": "golds",
+            "region": [
+              {
+                "name": "gold"
+              },
+              {
+                "name": "gold1"
+              },
+              {
+                "name": "gold2"
+              },
+              {
+                "name": "gold3"
+              },
+              {
+                "name": "gold4"
+              },
+              {
+                "name": "gold5"
+              },
+              {
+                "name": "gold6"
+              },
+              {
+                "name": "gold7"
+              }
+            ]
+          }
+        ],
+        "complement": [
+          {
+            "name": "wool-places-complement",
+            "block": [
+              {
+                "location": "24.0,8.0,151.0"
+              },
+              {
+                "location": "61.0,8.0,114.0"
+              },
+              {
+                "location": "-24.0,8.0,29.0"
+              },
+              {
+                "location": "-61.0,8.0,66.0"
+              }
+            ],
+            "region": [
+              {
+                "name": "wool-places"
+              }
+            ]
+          }
+        ],
+        "apply": [
+          {
+            "block-place-filter": "deny-place",
+            "block-break-filter": "goldbreak",
+            "message": "You can't modify the base.",
+            "region": [
+              {
+                "name": "base"
+              }
+            ]
+          },
+          {
+            "block-place-filter": "deny-place",
+            "block-break-filter": "woolbreak",
+            "message": "You can't modify the wool room.",
+            "region": [
+              {
+                "name": "woolroom"
+              }
+            ]
+          },
+          {
+            "enter-filter": "red",
+            "message": "You can't enter to the enemy's base.",
+            "region": [
+              {
+                "name": "red-base"
+              }
+            ]
+          },
+          {
+            "enter-filter": "blue",
+            "message": "You can't enter to the enemy's base.",
+            "region": [
+              {
+                "name": "blue-base"
+              }
+            ]
+          },
+          {
+            "enter-filter": "blue",
+            "message": "You can't enter to the your team's wool room.",
+            "region": [
+              {
+                "name": "blue-wools"
+              }
+            ]
+          },
+          {
+            "enter-filter": "red",
+            "message": "You can't enter to the your team's wool room.",
+            "region": [
+              {
+                "name": "red-wools"
+              }
+            ]
+          },
+          {
+            "block-place-filter": "deny-place",
+            "block-break-filter": "deny-break",
+            "message": "It is out of range, you can not put block here.",
+            "negative": [
+              {
+                "region": [
+                  {
+                    "name": "void"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "block-filter": "deny-blocks",
+            "message": "You can not edit around the pedestal.",
+            "region": [
+              {
+                "name": "wool-places-complement"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "blockdrops": [
+      {
+        "rule": [
+          {
+            "region": [
+              {
+                "region": [
+                  {
+                    "name": "golds"
+                  }
+                ]
+              }
+            ],
+            "filter": [
+              {
+                "block": [
+                  {
+                    "material": "gold block"
+                  }
+                ]
+              }
+            ],
+            "drops": [
+              {
+                "item": [
+                  {
+                    "item": "gold chestplate"
+                  },
+                  {
+                    "item": "gold leggings"
+                  },
+                  {
+                    "item": "gold boots"
+                  }
+                ]
+              }
+            ],
+            "experience": [
+              {
+                "int": 0
+              }
+            ],
+            "replacement": [
+              {
+                "material": "air"
+              }
+            ],
+            "direct": [
+              {
+                "flag": true
+              }
+            ]
+          },
+          {
+            "region": [
+              {
+                "block": [
+                  {
+                    "location": "0,3,39",
+                    "name": "green-wool"
+                  }
+                ]
+              }
+            ],
+            "filter": [
+              {
+                "block": [
+                  {
+                    "material": "wool:13"
+                  }
+                ]
+              }
+            ],
+            "drops": [
+              {
+                "item": [
+                  {
+                    "item": "wool",
+                    "amount": 2,
+                    "damage": 13
+                  }
+                ]
+              }
+            ],
+            "experience": [
+              {
+                "int": 0
+              }
+            ],
+            "replacement": [
+              {
+                "material": "wool:13"
+              }
+            ],
+            "direct": [
+              {
+                "flag": true
+              }
+            ],
+            "wrongtool": [
+              {
+                "flag": true
+              }
+            ]
+          },
+          {
+            "region": [
+              {
+                "block": [
+                  {
+                    "location": "51,3,90",
+                    "name": "magenta-wool"
+                  }
+                ]
+              }
+            ],
+            "filter": [
+              {
+                "block": [
+                  {
+                    "material": "wool:2"
+                  }
+                ]
+              }
+            ],
+            "drops": [
+              {
+                "item": [
+                  {
+                    "item": "wool",
+                    "amount": 2,
+                    "damage": 2
+                  }
+                ]
+              }
+            ],
+            "experience": [
+              {
+                "int": 0
+              }
+            ],
+            "replacement": [
+              {
+                "material": "wool:2"
+              }
+            ],
+            "direct": [
+              {
+                "flag": true
+              }
+            ],
+            "wrongtool": [
+              {
+                "flag": true
+              }
+            ]
+          },
+          {
+            "region": [
+              {
+                "block": [
+                  {
+                    "location": "0,3,141",
+                    "name": "pink-wool"
+                  }
+                ]
+              }
+            ],
+            "filter": [
+              {
+                "block": [
+                  {
+                    "material": "wool:6"
+                  }
+                ]
+              }
+            ],
+            "drops": [
+              {
+                "item": [
+                  {
+                    "item": "wool",
+                    "amount": 2,
+                    "damage": 6
+                  }
+                ]
+              }
+            ],
+            "experience": [
+              {
+                "int": 0
+              }
+            ],
+            "replacement": [
+              {
+                "material": "wool:6"
+              }
+            ],
+            "direct": [
+              {
+                "flag": true
+              }
+            ],
+            "wrongtool": [
+              {
+                "flag": true
+              }
+            ]
+          },
+          {
+            "region": [
+              {
+                "block": [
+                  {
+                    "location": "-51,3,90",
+                    "name": "lime-wool"
+                  }
+                ]
+              }
+            ],
+            "filter": [
+              {
+                "block": [
+                  {
+                    "material": "wool:5"
+                  }
+                ]
+              }
+            ],
+            "drops": [
+              {
+                "item": [
+                  {
+                    "item": "wool",
+                    "amount": 2,
+                    "damage": 5
+                  }
+                ]
+              }
+            ],
+            "experience": [
+              {
+                "int": 0
+              }
+            ],
+            "replacement": [
+              {
+                "material": "wool:5"
+              }
+            ],
+            "direct": [
+              {
+                "flag": true
+              }
+            ],
+            "wrongtool": [
+              {
+                "flag": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "renewables": [
+      {
+        "renewable": {}
+      }
+    ],
+    "wools": [
+      {
+        "wool": [
+          {
+            "team": "red",
+            "color": "magenta",
+            "block": [
+              {
+                "location": "-61.0,8.0,66.0"
+              }
+            ]
+          },
+          {
+            "team": "red",
+            "color": "pink",
+            "block": [
+              {
+                "location": "-24.0,8.0,29.0"
+              }
+            ]
+          },
+          {
+            "team": "blue",
+            "color": "green",
+            "block": [
+              {
+                "location": "24.0,8.0,151.0"
+              }
+            ]
+          },
+          {
+            "team": "blue",
+            "color": "lime",
+            "block": [
+              {
+                "location": "61.0,8.0,114.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "include": [
+      {
+        "src": "tutorial.xml"
+      }
+    ],
+    "maxbuildheight": [
+      {
+        "height": "30"
+      }
+    ],
+    "autorespawn": [
+      {}
+    ],
+    "locales": [
+      {
+        "locale": [
+          {
+            "lang": "ja_JP",
+            "string": [
+              {
+                "name": "You can't modify the base.",
+                "value": "拠点は編集出来ません。"
+              },
+              {
+                "name": "You can't modify the wool room.",
+                "value": "羊毛部屋は編集出来ません。"
+              },
+              {
+                "name": "You can't enter to the enemy's base.",
+                "value": "敵チームの拠点には侵入出来ません。"
+              },
+              {
+                "name": "You can't enter to the your team's wool room.",
+                "value": "自チームの羊毛部屋には侵入出来ません。"
+              },
+              {
+                "name": "It is out of range, you can not put block here.",
+                "value": "範囲外です、ここにブロックを置けません。"
+              },
+              {
+                "name": "Take the enemy's wool located to either side of the enemy's base and place it in　your victory",
+                "value": "敵本拠地横にある羊毛を奪取し、台座に設置"
+              },
+              {
+                "name": "You can not edit around the pedestal.",
+                "value": "台座周辺の編集はできません。"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "tutorial": [
+      {
+        "stage": [
+          {
+            "title": "Capture the Wool (CTW)",
+            "message": [
+              {
+                "line": [
+                  {
+                    "message": "This map is a `a`lCapture the Wool`r (CTW) map."
+                  },
+                  {
+                    "message": "\n    \t\t\t\tThe objective is to grab the wool on the enemy side and place it on your victory monument.\n    \t\t\t"
+                  }
+                ]
+              },
+              {
+                "line": [
+                  {
+                    "message": "このマップは `a`lCapture the Wool`r (CTW) マップです。"
+                  },
+                  {
+                    "message": "敵陣の羊毛部屋から羊毛を奪取し、台座に設置する事が目標になります。"
+                  }
+                ]
+              }
+            ],
+            "teleport": [
+              {
+                "point": [
+                  {
+                    "yaw": 0,
+                    "pitch": 0,
+                    "location": "0.5,29,0.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "`cRed `rteam spawn",
+            "message": [
+              {
+                "line": [
+                  {
+                    "message": "This is `cRed Team`r base."
+                  }
+                ]
+              },
+              {
+                "line": [
+                  {
+                    "message": "ここは`cRedチーム`rの拠点です。"
+                  }
+                ]
+              }
+            ],
+            "teleport": [
+              {
+                "point": [
+                  {
+                    "yaw": -225,
+                    "pitch": 35,
+                    "location": "-23.5,20,66.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Blue team's Wool rooms",
+            "message": [
+              {
+                "line": [
+                  {
+                    "message": "\n    \t\t\t\t`9Blue team`r side has `alime `rand `2green `r wool rooms.\n    \t\t\t"
+                  },
+                  {
+                    "message": "\n    \t\t\t\t`cRed Team`r side has `5magenta `rand `dpink`r wool rooms.\n    \t\t\t"
+                  },
+                  {
+                    "message": "\n    \t\t\t\t`cRed Team`r should defend these rooms against enemy who are trying to steal the wool.\n    \t\t\t"
+                  }
+                ]
+              },
+              {
+                "line": [
+                  {
+                    "message": "\n    \t\t\t\t`9Blueチーム`rの陣地には`alime`rと `2green `rの羊毛部屋があります。\n    \t\t\t"
+                  },
+                  {
+                    "message": "`cRedチーム`rの陣地には`5magenta`rと `dpink `rの羊毛部屋があります。"
+                  },
+                  {
+                    "message": "`cRedチーム`rは羊毛を奪取しようとする敵の攻撃からこの羊毛部屋を防衛する必要があります。"
+                  }
+                ]
+              }
+            ],
+            "teleport": [
+              {
+                "point": [
+                  {
+                    "yaw": 0,
+                    "pitch": 40,
+                    "location": "0.5,15,126.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Place Point",
+            "message": [
+              {
+                "line": [
+                  {
+                    "message": "This is the base for installing the wool."
+                  }
+                ]
+              },
+              {
+                "line": [
+                  {
+                    "message": "羊毛を設置する台座です。"
+                  }
+                ]
+              }
+            ],
+            "teleport": [
+              {
+                "point": [
+                  {
+                    "yaw": 0,
+                    "pitch": 0,
+                    "location": "24.5,7,149.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "glhf",
+            "message": [
+              {
+                "line": [
+                  {
+                    "message": "Good Luck! Have Fun!"
+                  }
+                ]
+              },
+              {
+                "line": [
+                  {
+                    "message": "それではお楽しみください！"
+                  }
+                ]
+              }
+            ],
+            "teleport": [
+              {
+                "point": [
+                  {
+                    "yaw": 0,
+                    "pitch": 0,
+                    "location": "0,29,0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
