@@ -1,3 +1,3 @@
 # to-xml
 
-http://docs.bindunity.net/
+http://docs.bindunity.net/ja/latest/
