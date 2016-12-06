@@ -1,3 +1,4 @@
 json-to-xml/convert.go
 toml-to-xml/convert.go
 yaml-to-xml/convert.go
+build.bat
